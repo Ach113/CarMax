@@ -1,0 +1,121 @@
+version: "3.1"
+
+nlu:
+
+- intent: find_car
+  examples: |
+    - can I buy a car?
+    - which cars are available?
+    - can you help me find a car?
+    - I am looking for a car
+    - I want to find a car
+    - I am looking to buy a car
+    - I want a car
+
+- intent: info_car
+  examples: |
+    - I am looking for [Mercedes-Benz](car_model)
+    - I want [Volkswagen Jetta](car_model)
+    - I am looking for [Chevrolet Volt](car_model)
+    - I want to buy [BMW](car_model)
+    - I wanna buy [Jeep](car_model)
+    - I am looking for [Hyundai Sonata](car_model)
+    - [Honda Civic](car_model)
+    - I want [Ford Focus](car_model)
+
+- intent: info_location
+  examples: |
+    - I live on [10th Street, San Jose, CA](location)
+    - My address is [Hollywood avenue](location)
+    - I live in [San Jose, 7th Street](location)
+    - My location is [Fremont, 1st street](location)
+    - my current address [El Cajon, San Diego](location)
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

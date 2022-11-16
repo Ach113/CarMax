@@ -1,0 +1,65 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - find_car
+  - info_car
+  - info_location
+
+entities:
+- car_model
+- location
+- is_old_user
+
+slots:
+  car_model:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: car_model
+  location:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: location
+  is_old_user:
+    type: bool
+    mappings:
+    - type: from_entity
+      entity: is_old_user
+
+responses:
+  utter_find_car:
+  - text: "I can help you with that. What kind of car are you looking for?"
+
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_location_request:
+    - text: "Great! Can you also share your address, so I can find a car that is closest to you."
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+actions:
+  - action_run_car_query
+  - action_store_location
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

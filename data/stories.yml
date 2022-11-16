@@ -1,0 +1,56 @@
+version: "3.1"
+
+stories:
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: find_car_new_user
+  steps:
+    - intent: find_car
+    - action: utter_find_car
+    - intent: info_car
+      entities:
+        - car_model
+    - slot_was_set:
+        - is_old_user: false
+    - action: utter_location_request
+    - intent: info_location
+      entities:
+        - location
+    - action: action_store_location
+    - action: action_run_car_query
+
+- story: find_car_old_user
+  steps:
+    - intent: find_car
+    - action: utter_find_car
+    - intent: info_car
+      entities:
+        - car_model
+    - slot_was_set:
+        - is_old_user: true
+    - action: action_run_car_query
+
+#- story: sad path 1
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: affirm
+#  - action: utter_happy
+#
+#- story: sad path 2
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: deny
+#  - action: utter_goodbye
