@@ -5,35 +5,39 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
 
-- story: find_car_new_user
+- story: gratitude
+  steps:
+    - intent: thank
+    - action: utter_thank
+
+- story: find_car
   steps:
     - intent: find_car
     - action: utter_find_car
+
     - intent: info_car
       entities:
         - car_model
-    - slot_was_set:
-        - is_old_user: false
-    - action: utter_location_request
-    - intent: info_location
+    - action: action_check_car
+
+    - intent: info_zip
       entities:
-        - location
+        - zip
+
+    - action: action_display_result
     - action: action_store_location
-    - action: action_run_car_query
 
-- story: find_car_old_user
+- story: search_web
   steps:
-    - intent: find_car
-    - action: utter_find_car
+    - intent: search_web
+    - action: utter_web
     - intent: info_car
       entities:
         - car_model
-    - slot_was_set:
-        - is_old_user: true
     - action: action_run_car_query
+    - action: action_store_location
+
 
 #- story: sad path 1
 #  steps:

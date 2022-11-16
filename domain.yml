@@ -10,12 +10,13 @@ intents:
   - bot_challenge
   - find_car
   - info_car
-  - info_location
+  - info_zip
+  - search_web
+  - thank
 
 entities:
 - car_model
-- location
-- is_old_user
+- zip
 
 slots:
   car_model:
@@ -23,26 +24,21 @@ slots:
     mappings:
     - type: from_entity
       entity: car_model
-  location:
+  zip:
     type: text
     mappings:
     - type: from_entity
-      entity: location
-  is_old_user:
-    type: bool
-    mappings:
-    - type: from_entity
-      entity: is_old_user
+      entity: zip
 
 responses:
   utter_find_car:
   - text: "I can help you with that. What kind of car are you looking for?"
 
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hello, I am Max, a digital assistant to help you find the cheapest car. How can I help you today?"
 
   utter_location_request:
-    - text: "Great! Can you also share your address, so I can find a car that is closest to you."
+    - text: "Great! Can you also share your zip code, so I can find a car that is closest to you."
 
   utter_did_that_help:
   - text: "Did that help you?"
@@ -56,9 +52,17 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+  utter_web:
+  - text: "I can help you with that. Which car brand would you like to lookup?"
+
+  utter_thank:
+    - text: "Thank you for using our service. You can enter another query if you like."
+
 actions:
   - action_run_car_query
   - action_store_location
+  - action_check_car
+  - action_display_result
 
 session_config:
   session_expiration_time: 60

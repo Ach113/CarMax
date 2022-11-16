@@ -2,6 +2,15 @@ version: "3.1"
 
 nlu:
 
+- intent: thank
+  examples: |
+    - thank you so much
+    - thanks
+    - than you
+    - many thanks
+    - ty
+    - appreciate your help
+
 - intent: find_car
   examples: |
     - can I buy a car?
@@ -23,13 +32,25 @@ nlu:
     - [Honda Civic](car_model)
     - I want [Ford Focus](car_model)
 
-- intent: info_location
+- intent: info_zip
   examples: |
-    - I live on [10th Street, San Jose, CA](location)
-    - My address is [Hollywood avenue](location)
-    - I live in [San Jose, 7th Street](location)
-    - My location is [Fremont, 1st street](location)
-    - my current address [El Cajon, San Diego](location)
+    - My zip code is [95112](zip)
+    - Zip is [12312](zip)
+    - Zip: [12432](zip)
+    - [95111](zip)
+    - [38541](zip) is my zip code
+
+- intent: search_web
+  examples: |
+    - I want to find car on web
+    - I would like to search web
+    - I would like to find a car on internet
+    - Can you lookup car on internet
+    - Can you help me find car on web
+    - search web
+    - search internet
+    - find car on web
+    - find car on internet
 
 - intent: greet
   examples: |
