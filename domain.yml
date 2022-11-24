@@ -13,6 +13,7 @@ intents:
   - info_zip
   - search_web
   - thank
+  - info_bot
 
 entities:
 - car_model
@@ -47,7 +48,7 @@ responses:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Bye!"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
@@ -57,6 +58,11 @@ responses:
 
   utter_thank:
     - text: "Thank you for using our service. You can enter another query if you like."
+
+  utter_info_bot:
+    - text: "I can help you find a cheapest car of your desired brand in our database, at your nearest location too.\n 
+  If car is not found in our database, I can help you search it on web too"
+
 
 actions:
   - action_run_car_query

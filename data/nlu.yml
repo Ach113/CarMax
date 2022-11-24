@@ -140,3 +140,10 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: info_bot
+  examples: |
+    - how can you help?
+    - what services can you provide?
+    - how will you help me?
+    - what are your services?

@@ -6,6 +6,11 @@ stories:
   - intent: greet
   - action: utter_greet
 
+- story: info_bot
+  steps:
+    - intent: info_bot
+    - action: utter_info_bot
+
 - story: gratitude
   steps:
     - intent: thank
@@ -26,6 +31,8 @@ stories:
         - zip
 
     - action: action_display_result
+    - intent: affirm
+    - action: action_run_car_query
     - action: action_store_location
 
 - story: search_web

@@ -59,7 +59,7 @@ class ActionCheckCar(Action):
         if len(df) == 0:
             response = f'{car_model} could not be found in our database. ' \
                        'Please try again if you made a typo,' \
-                       'or type `search on web` if you want to search the car outside of our database'
+                       ' or type `search on web` if you want to search the car outside of our database'
         else:
             response = f'Found {len(df)} instances of {car_model}, ' \
                        f'please enter you zip code so we can find a car closest to you'

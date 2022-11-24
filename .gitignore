@@ -131,3 +131,4 @@ dmypy.json
 # rasa
 .rasa
 .idea
+log.txt
