@@ -15,7 +15,8 @@ Clone the repository and install dependencies \
 `pip install -r requirements.txt`
 
 Setup server side (connect to slack) \
-`rasa run actions` 
+`rasa run` \
+`rasa run actions`
 
 You can use [ngrok](https://ngrok.com/download) to deploy the chatbot on slack \
 `ngrok http 5005` 

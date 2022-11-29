@@ -25,7 +25,7 @@ class ActionStoreLocation(Action):
         with open('log.txt', 'a') as file:
             car_model = tracker.get_slot('car_model')
             zipcode = tracker.get_slot('zip')
-            file.write(f'User at {zipcode} - car model {car_model}')
+            file.write(f'User at {zipcode} - car model {car_model}\n')
 
 
 class ActionRunCarQuery(Action):
