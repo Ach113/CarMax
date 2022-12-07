@@ -1,5 +1,5 @@
 ## CarMax
-CarMax, a chatbot written using RASA
+CarMax, a chatbot written using RASA 3.3.1
 
 ## Requirements
 rasa >= 3.3.1 \
